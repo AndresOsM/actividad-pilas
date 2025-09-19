@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Stack<String> myStack = new Stack<>();
+        Stack<String> mypila = new Stack<>();
         int op;
         String text;
 
@@ -28,6 +29,13 @@ public class Main {
                     text = sc.nextLine();
 
                     myStack.push(text);
+                    System.out.println(myStack);
+                    break;
+
+                case 2:
+                    mypila.push(myStack.pop());
+                    System.out.println("Texto borrado");
+                    break;
             }
         }  while (op != 5);
 

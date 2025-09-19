@@ -33,8 +33,13 @@ public class Main {
                     break;
 
                 case 2:
-                    mypila.push(myStack.pop());
-                    System.out.println("Texto borrado");
+                    if (!myStack.isEmpty()){
+                        mypila.push(myStack.pop());
+                        System.out.println("Texto borrado");
+                    } else{
+                        System.out.println("No se encontro texto para borrar");
+                    }
+
                     break;
             }
         }  while (op != 5);

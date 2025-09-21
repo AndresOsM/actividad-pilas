@@ -39,7 +39,17 @@ public class Main {
                     } else{
                         System.out.println("No se encontro texto para borrar");
                     }
+                    System.out.println(myStack);
+                    break;
 
+                case 3:
+                    if (!myStack.isEmpty()){
+                        myStack.push(mypila.pop());
+                        System.out.println("Texto reconstruido");
+                    } else{
+                        System.out.println("No se encontro texto para rehacer");
+                    }
+                    System.out.println(myStack);
                     break;
             }
         }  while (op != 5);

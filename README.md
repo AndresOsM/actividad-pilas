@@ -1,8 +1,8 @@
-#OBJETIVO DEL PROYECTO
+# OBJETIVO DEL PROYECTO
 
 Desarrollar un editor de texto sencillo en consola utilizando el lenguaje Java, que permita al usuario escribir texto, deshacer (Undo) y rehacer (Redo) acciones mediante el uso de pilas (stacks) implementadas manualmente, con el fin de comprender su estructura y funcionamiento. Además, fomentar el trabajo colaborativo mediante el uso de GitHub para el control de versiones y la contribución activa de todos los integrantes del equipo.
 
-##Intrucciones de ejecución.
+## Intrucciones de ejecución.
 
 
 Al ejecutar el proyecto inicalmente nos muestra un menú en consola.
@@ -51,7 +51,7 @@ Por ultimo en la opción 5 finalizamos el programa con un mensaje de despedida.
 
 
 
-#EQUIPO DE TRABAJO
+# EQUIPO DE TRABAJO
 
  - Angie Paola Botero Agudelo
  - Andres Felipe Quiroz Agudelo

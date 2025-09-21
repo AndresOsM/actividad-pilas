@@ -1,3 +1,4 @@
+import javax.lang.model.SourceVersion;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -9,7 +10,7 @@ public class Main {
         //Inicialización de pilas y variables
         Stack<String> myStackOne = new Stack<>(); //Pila inicial
         Stack<String> myStackTwo = new Stack<>(); //Pila secundaria
-        int op;
+        int op = 0;
         String text;
 
         // Implementación de do while
@@ -23,8 +24,17 @@ public class Main {
             System.out.println("3. Rehacer");
             System.out.println("4. Mostrar texto");
             System.out.println("5. Salir");
-            op = sc.nextInt();
-            sc.nextLine();
+
+            if (sc.hasNextInt()){
+                op = sc.nextInt();
+                sc.nextLine(); // Limpiar el buffer después de leer un entero
+
+            } else {
+                System.out.println("Por favor ingrese solo numeros 1-5\n"); //Mensaje de error
+                sc.next(); // Limpiar la entrada no válida
+                continue; // Volver al inicio del bucle
+            }
+
 
             // Implementación para entrar a cada caso del menú consola
             switch (op) {

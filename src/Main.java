@@ -58,22 +58,24 @@ public class Main {
                     System.out.println(myStackTwo); //Imprime pila 2
                     break;
 
-                case 4:
-                    if (!myStackOne.isEmpty()){
-                        System.out.println("Este es el texto actual: " + myStackOne.peek());
+                case 4: //Muestra el texto actual
+                    if (!myStackOne.isEmpty()){//Valida sí la pila 1 tiene datos
+                        System.out.println("Este es el texto actual: " + myStackOne.peek()); //.peek muestra el último dato de la pila 1 y se concatena con el mensaje
                     } else{
-                        System.out.println("No se encontro texto");
+                        System.out.println("No se encontro texto");//Sí la pila vacía muestra mensaje
                     }
                     break;
 
-                case 5:
-                    System.out.println("Gracias, vuelva pronto!");
+                case 5://Salir del programa
+                    System.out.println("Gracias, vuelva pronto!");//Mensaje de despedida
                     break;
 
-                default:
-                    System.out.println("Opcion incorrecta\n");
+                default://Valida que la opción ingresada sea correcta
+                    System.out.println("Opcion incorrecta\n");//Mensaje de error
+                    break;
             }
-        }  while (op != 5);
+        }  while (op != 5);//Sí la opción es diferente de 5 se repite el menú
+        sc.close(); //Cierra el scanner
 
     }
 }

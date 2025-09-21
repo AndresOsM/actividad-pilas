@@ -6,15 +6,15 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Stack<String> myStack = new Stack<>();
-        Stack<String> mypila = new Stack<>();
+        Stack<String> myStackOne = new Stack<>();
+        Stack<String> myStackTwo = new Stack<>();
         int op;
         String text;
 
         do {
-            System.out.println("Bienvenido !!");
+            System.out.println("Bienvenido !!\n");
 
-            System.out.println("Escoja la accion que desea realizar (1-5)");
+            System.out.println("Escoja la accion que desea realizar (1-5)\n");
             System.out.println("1. Escribir texto");
             System.out.println("2. Deshacer");
             System.out.println("3. Rehacer");
@@ -28,38 +28,45 @@ public class Main {
                     System.out.println("Escribir texto");
                     text = sc.nextLine();
 
-                    myStack.push(text);
-                    System.out.println(myStack);
+                    myStackOne.push(text);
+                    System.out.println(myStackOne);
                     break;
 
                 case 2:
-                    if (!myStack.isEmpty()){
-                        mypila.push(myStack.pop());
+                    if (!myStackOne.isEmpty()){
+                        myStackTwo.push(myStackOne.pop());
                         System.out.println("Texto borrado");
                     } else{
                         System.out.println("No se encontro texto para borrar");
                     }
-                    System.out.println(myStack);
+                    System.out.println(myStackOne);
+                    System.out.println(myStackTwo);
                     break;
 
                 case 3:
-                    if (!myStack.isEmpty()){
-                        myStack.push(mypila.pop());
+                    if (!myStackTwo.isEmpty()){
+                        myStackOne.push(myStackTwo.pop());
                         System.out.println("Texto reconstruido");
                     } else{
                         System.out.println("No se encontro texto para rehacer");
                     }
-                    System.out.println(myStack);
+                    System.out.println(myStackOne);
                     break;
 
                 case 4:
-                    if (!myStack.isEmpty()){
-                        System.out.println("Este es el texto actual: " + myStack.peek());
+                    if (!myStackOne.isEmpty()){
+                        System.out.println("Este es el texto actual: " + myStackOne.peek());
                     } else{
                         System.out.println("No se encontro texto");
                     }
                     break;
 
+                case 5:
+                    System.out.println("Gracias, vuelva pronto!");
+                    break;
+
+                default:
+                    System.out.println("Opcion incorrecta\n");
             }
         }  while (op != 5);
 

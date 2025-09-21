@@ -51,6 +51,15 @@ public class Main {
                     }
                     System.out.println(myStack);
                     break;
+
+                case 4:
+                    if (!myStack.isEmpty()){
+                        System.out.println("Este es el texto actual: " + myStack.peek());
+                    } else{
+                        System.out.println("No se encontro texto");
+                    }
+                    break;
+
             }
         }  while (op != 5);
 
